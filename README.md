@@ -17,8 +17,7 @@ I present to you the fruit of my labour. No doubt there is many things that can 
 - -p: Whether the script should provide performance data or not PLEASE NOTE: The more network interfaces present, the longer the check will take if Performance Data is neccesary to be retrieved.
 
 ## Note: ##
-The units you specify the warnings/critical in must be the same units as "/etc/vnstat.conf"
-is configured to use, otherwise the script will not work correctly, and eveything would give incorrect
+The units you specify the warnings/critical in must be units "KiB", otherwise the script will not work correctly, and eveything would give incorrect
 information
 
 ## Usage: ##

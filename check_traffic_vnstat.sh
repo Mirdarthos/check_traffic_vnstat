@@ -12,7 +12,7 @@
 #    * -W Outgoing speed Warning
 #    * -C: Outgoing speed Critical
 #    * -i: Interface this should monitor
-#    * -p: Whether the script should provide performance data or not PLEASE NOTE: The more network interfaces present, the longer the check
+#    * -p: Whether the script should provide performance data or not. PLEASE NOTE: The more network interfaces present, the longer the check
 #             will take if Performance Data is neccesary to be retrieved.
 #
 # Please Note:
