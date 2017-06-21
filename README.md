@@ -1,4 +1,4 @@
-#a Plugin for Icinga2 to check the traffic on a specific interface using "vnstat".#
+##a Plugin for Icinga2 to check the traffic on a specific interface using "vnstat". ##
 
 I searched high and low for something that would monitor the traffic ratee of network interfaces. I couldn't find something. So I decided to "roll my own", so to speak. Using bash. And I've never used bash before.
 
