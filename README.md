@@ -1,4 +1,4 @@
-##a Plugin for Icinga2 to check the traffic on a specific interface using "vnstat". ##
+# a Plugin for Icinga2 to check the traffic on a specific interface using "vnstat". #
 
 I searched high and low for something that would monitor the traffic ratee of network interfaces. I couldn't find something. So I decided to "roll my own", so to speak. Using bash. And I've never used bash before.
 
@@ -14,8 +14,7 @@ I present to you the fruit of my labour. No doubt there is many things that can 
 - -W: Outgoing speed Warning
 - -C: Outgoing speed Critical
 - -i: Interface this should monitor
-- -p: Whether the script should provide performance data or not PLEASE NOTE: The more network interfaces present, the longer the check
--     will take if Performance Data is neccesary to be retrieved.
+- -p: Whether the script should provide performance data or not PLEASE NOTE: The more network interfaces present, the longer the check will take if Performance Data is neccesary to be retrieved.
 
 ## Note: ##
 The units you specify the warnings/critical in must be the same units as "/etc/vnstat.conf"
