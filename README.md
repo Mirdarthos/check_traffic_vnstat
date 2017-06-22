@@ -7,6 +7,8 @@ I took it as a challenge, since learning bash and doing something in it is somet
 
 I present to you the fruit of my labour. No doubt there is many things that can be done differently, or even better, but this is my first bash script, so sorry if there are some unnecessary things. **Please point them out if there are.**
 
+**This is free software with ABSOLUTELY NO WARRANTY.**
+
 ----------
 ## Arguments: ##
 - -w: Incoming Speed Warning
