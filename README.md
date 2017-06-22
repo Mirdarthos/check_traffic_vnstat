@@ -7,8 +7,6 @@ I took it as a challenge, since learning bash and doing something in it is somet
 
 I present to you the fruit of my labour. No doubt there is many things that can be done differently, or even better, but this is my first bash script, so sorry if there are some unnecessary things. **Please point them out if there are.**
 
-**This is free software with ABSOLUTELY NO WARRANTY.**
-
 ----------
 ## Arguments: ##
 - -w: Incoming Speed Warning
@@ -24,5 +22,5 @@ The units you specify the warnings/critical in must be units "KiB", otherwise th
 ## Usage: ##
     ./check_traffic_vnstat.sh -w <incomingwarning> -W <outgoingwarning> -c <incomingcritical> -C <outgoingcritical> -i <interface> -p
 ## Extra Credit: ##
-- Thanks to [AboutTimeIStoppedLurking](https://imgur.com/user/AboutTimeIStoppedLurking), [karmalicious79](https://imgur.com/user/karmalicious79) and [SendPotatoes ](https://imgur.com/user/SendPotatoes)on [www.imgur.com](www.imgur.com "www.imgur.com") for their helping me with this.
+- Thanks to *AboutTimeIStoppedLurking*, *karmalicious79* and *SendPotatoes* on [www.imgur.com](www.imgur.com "www.imgur.com") for their helping me with this.
  

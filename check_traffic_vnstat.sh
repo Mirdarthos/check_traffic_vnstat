@@ -27,22 +27,22 @@
 function unit_to_kib() {
 	local AMOUNT=$1
 	local FROMUNIT=$2
-	if [ "$FROMUNIT" == "KiB" ]; then
+	if [ $FROMUNIT == "KiB" ]; then
 		CONVERTED_AMOUNT=$AMOUNT
 		echo $(bc -l <<< "scale=2;$CONVERTED_AMOUNT")
-	elif [ "$FROMUNIT" == "kB" ]; then
+	elif [ $FROMUNIT == "kB" ]; then
 		CONVERTED_AMOUNT=$(bc -l <<< "scale=2;$AMOUNT*0.976562")
 		echo $(bc -l <<< "scale=2;$CONVERTED_AMOUNT")
-	elif [ "$FROMUNIT" == "kbit" ]; then
+	elif [ $FROMUNIT == "kbit" ]; then
 		CONVERTED_AMOUNT=$(bc -l <<< "scale=2;$AMOUNT*0.12207")
 		echo $(bc -l <<< "scale=2;$CONVERTED_AMOUNT")
-	elif [ "$FROMUNIT" == "MiB" ]; then
+	elif [ $FROMUNIT == "MiB" ]; then
 		CONVERTED_AMOUNT=$(bc -l <<< "scale=2;$AMOUNT*1024")
 		echo $(bc -l <<< "scale=2;$CONVERTED_AMOUNT")
-	elif [ "$FROMUNIT" == "Mbit" ]; then
+		elif [ $FROMUNIT == "Mbit" ]; then
 		CONVERTED_AMOUNT=$(bc -l <<< "scale=2;$AMOUNT*122.07")
 		echo $(bc -l <<< "scale=2;$CONVERTED_AMOUNT")
-	elif [ "$FROMUNIT" == "mbit" ]; then
+	elif [ $FROMUNIT == "mbit" ]; then
 		CONVERTED_AMOUNT=$(bc -l <<< "$scale=2;$AMOUNT*122.07")
 		echo $(bc -l <<< "scale=2;$CONVERTED_AMOUNT")
 	else
@@ -78,8 +78,6 @@ function HELP {
 	echo ""
   exit 1
 }
-
-EXITCODE=3
 
 # Parse the options from the command line
 while getopts :w:W:c:C:i:hp FLAG; do
