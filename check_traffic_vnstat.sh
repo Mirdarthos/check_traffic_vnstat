@@ -213,7 +213,8 @@ else
 	EXITCODE=3
 fi
 
-if [ -v EXTRAMESSAGE ]; then
+
+if [ -z "${EXTRAMESSAGE-}" ] && [ "${EXTRAMESSAGE+xxx}" != "xxx" ]; then
 	echo "$EXTRAMESSAGE"
 fi
 
