@@ -9,11 +9,12 @@
 # Arguments:
 #    * -w: Incoming Speed Warning
 #    * -c: Incoming speed Critical
-#    * -W Outgoing speed Warning
+#    * -W: Outgoing speed Warning
 #    * -C: Outgoing speed Critical
 #    * -i: Interface this should monitor
 #    * -p: Whether the script should provide performance data or not. PLEASE NOTE: The more network interfaces present, the longer the check
 #             will take if Performance Data is neccesary to be retrieved.
+#    * -m: 	REQUIRED WITH -p OPTION. Method to use to get the interfaces list for retrieving perfomance data.
 #
 # Please Note:
 # The units you specify the warnings/critical in must be the same units as "/etc/vnstat.conf"
@@ -62,11 +63,12 @@ function HELP {
 	echo "Arguments:"
 	echo "   * -w: Incoming Speed Warning (KiB/s)"
 	echo "   * -c: Incoming speed Critical (KiB/s)"
-	echo "   * -W Outgoing speed Warning (KiB/s)"
+	echo "   * -W: Outgoing speed Warning (KiB/s)"
 	echo "   * -C: Outgoing speed Critical (KiB/s)"
 	echo "   * -i: Interface this should monitor"
 	echo "   * -p: Whether the script should provide performance data or not. PLEASE NOTE: The more network interfaces present, the longer the check"
 	echo "           will take if Performance Data is neccesary to be retrieved."
+	echo "   * -m: REQUIRED WITH -p OPTION. Method to use to get the interfaces list for retrieving perfomance data."
 	echo ""
 	echo "Please Note:"
 	echo "The units you specify the warnings/critical in must be the same units as \"/etc/vnstat.conf\""
@@ -80,7 +82,7 @@ function HELP {
 }
 
 # Parse the options from the command line
-while getopts :w:W:c:C:i:hp FLAG; do
+while getopts :w:W:c:C:i:hpm: FLAG; do
   case $FLAG in
     w)
       INWARNING=$OPTARG
@@ -182,12 +184,12 @@ fi
 # If requested, add necessary Performance Data
 REQUESTED_INTERFACE=$INTERFACE
 if [ $PERFORMANCE_DATA ]; then
-	TXSTATUS+="| "
-	ALL_INTERFACES=$(vnstat --iflist | grep "Available interfaces: " | cut -d":" -f2 | cut -c 2-)
+	ALL_INTERFACES=$(ls /sys/class/net)
 	ALL_INTERFACES_ARRAY=$(echo "$ALL_INTERFACES" | tr ' ' "\n")
+	TXSTATUS+="| "
 	for INTERFACE in $ALL_INTERFACES_ARRAY
 	do
-	# format it into performance data
+	if [[  "$INTERFACE" != "lo"  ]]; then
 		if [[ "$INTERFACE" == "$REQUESTED_INTERFACE" ]]; then
 			TXSTATUS+="$INTERFACE-rx-rate=$reqrxspeed;$INWARNING;$INCRITICAL; $INTERFACE-tx-rate=$reqtxspeed;$OUTWARNING;$OUTCRITICAL; "
 		else
@@ -198,10 +200,8 @@ if [ $PERFORMANCE_DATA ]; then
 		
 		TXSTATUS+="$INTERFACE-rx-rate=$rxspeed;;; $INTERFACE-tx-rate=$txspeed;;; "
 		fi
-		
-		
-		
-	done
+	fi
+	done	
 fi
 
 
