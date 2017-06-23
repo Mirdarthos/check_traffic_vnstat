@@ -1,6 +1,6 @@
 #!/bin/bash
 # ******************************************************************************************************************** #
-# Written by Charl Loubser.
+# Written by Mirdarthos.
 # I wrote this, because sometimes you just need to monitor network traffic. Wheter it is internet
 # or any other network. I have scoured the internet for something the can do the job, but, to my
 # suprise, couldn't find anything. So I made the descisin to do this. It is also my first bash script,
@@ -14,9 +14,8 @@
 #    * -i: Interface this should monitor
 #    * -p: Whether the script should provide performance data or not. PLEASE NOTE: The more network interfaces present, the longer the check
 #             will take if Performance Data is neccesary to be retrieved.
-#    * -m: 	REQUIRED WITH -p OPTION. Method to use to get the interfaces list for retrieving perfomance data.
 #
-# Please Note:
+# Note:
 # The units you specify the warnings/critical in must be the same units as "/etc/vnstat.conf"
 # is configured to use, otherwise the script will not work correctly, and eveything would give incorrect
 # information
@@ -54,7 +53,7 @@ function unit_to_kib() {
 #Help function
 function HELP {
 	echo ""
-	echo "Written by Charl Loubser."
+	echo "Written by Mirdarthos."
 	echo "I wrote this, because sometimes you just need to monitor network traffic. Wheter it is internet"
 	echo "or any other network. I have scoured the internet for something the can do the job, but, to my"
 	echo "suprise, couldn't find anything. So I made the descisin to do this. It is also my first bash script,"
@@ -68,9 +67,7 @@ function HELP {
 	echo "   * -i: Interface this should monitor"
 	echo "   * -p: Whether the script should provide performance data or not. PLEASE NOTE: The more network interfaces present, the longer the check"
 	echo "           will take if Performance Data is neccesary to be retrieved."
-	echo "   * -m: REQUIRED WITH -p OPTION. Method to use to get the interfaces list for retrieving perfomance data."
-	echo ""
-	echo "Please Note:"
+	echo "Note:"
 	echo "The units you specify the warnings/critical in must be the same units as \"/etc/vnstat.conf\""
 	echo "is configured to use, otherwise the script will not work correctly, and eveything would give incorrect"
 	echo "information"
