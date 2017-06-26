@@ -1,4 +1,4 @@
-name: check_traffic_vnstat
+name: Check Traffic vnStat
 description: "file:///README.md"
 url: https://github.com/Mirdarthos/check_traffic_vnstat
 tags: Statistic
