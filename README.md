@@ -20,7 +20,7 @@ I present to you the fruit of my labour. No doubt there is many things that can 
 The units you specify the warnings/critical in must be units "KiB", otherwise the script will not work correctly, and eveything would give incorrect information.
 
 ## Usage: ##
-    ./check_traffic_vnstat.sh -w <incomingwarning> -W <outgoingwarning> -c <incomingcritical> -C <outgoingcritical> -i <interface> -p
+    ./check_traffic_vnstat.sh -w [incomingwarning] -W [outgoingwarning] -c [incomingcritical] -C [outgoingcritical] -i [interface] -p
 ## Extra Credit: ##
 - Thanks to [AboutTimeIStoppedLurking](https://imgur.com/user/AboutTimeIStoppedLurking "AboutTimeIStoppedLurking's Imgur profile."), [karmalicious79](https://imgur.com/user/karmalicious79 "karmalicious79's Imgur profile.") and [SendPotatoes](https://imgur.com/user/SendPotatoes "SendPotatoes's Imgur profile.") on [www.imgur.com](www.imgur.com "www.imgur.com") for their helping me with this.
  
