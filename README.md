@@ -22,5 +22,11 @@ The units you specify the warnings/critical in must be units "KiB", otherwise th
 ## Usage: ##
     ./check_traffic_vnstat.sh -w [incomingwarning] -W [outgoingwarning] -c [incomingcritical] -C [outgoingcritical] -i [interface] -p
 ## Extra Credit: ##
-- Thanks to [AboutTimeIStoppedLurking](https://imgur.com/user/AboutTimeIStoppedLurking "AboutTimeIStoppedLurking's Imgur profile."), [karmalicious79](https://imgur.com/user/karmalicious79 "karmalicious79's Imgur profile.") and [SendPotatoes](https://imgur.com/user/SendPotatoes "SendPotatoes's Imgur profile.") on [www.imgur.com](www.imgur.com "www.imgur.com") for their helping me with this.
+Thanks to 
+
+- [AboutTimeIStoppedLurking](https://imgur.com/user/AboutTimeIStoppedLurking "AboutTimeIStoppedLurking's Imgur profile.")
+- [karmalicious79](https://imgur.com/user/karmalicious79 "karmalicious79's Imgur profile.")
+- [SendPotatoes](https://imgur.com/user/SendPotatoes "SendPotatoes's Imgur profile.")
+
+on [www.imgur.com](www.imgur.com "www.imgur.com") for their helping me with this.
  
