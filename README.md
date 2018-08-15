@@ -19,6 +19,14 @@ I present to you the fruit of my labour. No doubt there is many things that can 
 ## Note: ##
 The units you specify the warnings/critical in must be units "KiB", otherwise the script will not work correctly, and eveything would give incorrect information.
 
+When used on systems that uses comma separators in numbers(e.g. DE), please set the vnstat language to EN:
+
+`vi /etc/vnstat.conf` (Ubuntu)
+```
+# locale (LC_ALL) ("-" = use system locale)
+Locale "en_us.utf-8"
+```
+
 ## Usage: ##
     ./check_traffic_vnstat.sh -w [incomingwarning] -W [outgoingwarning] -c [incomingcritical] -C [outgoingcritical] -i [interface] -p
 ## Extra Credit: ##
