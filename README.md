@@ -4,8 +4,7 @@ I searched high and low for something that would monitor the traffic ratee of ne
 
 I took it as a challenge, since learning bash and doing something in it is something I've been wanting to do for some time now, so this seemed like a perfect opportunity.
 
-
-I present to you the fruit of my labour. No doubt there is many things that can be done differently, or even better, but this is my first bash script, so sorry if there are some unnecessary things. **Please point them out if there are.**
+I present to you the fruit of my labour. No doubt there are many things that can be done differently, or even better, but this is my first bash script, so sorry if there are some unnecessary things. **Please point them out if there are.**
 
 ----------
 ## Arguments: ##
